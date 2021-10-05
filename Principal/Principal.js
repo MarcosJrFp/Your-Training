@@ -14,3 +14,24 @@ window.addEventListener("scroll", function() {
     var hamburguer = document.querySelector(".hamburguer");
     hamburguer.classList.toggle("sticky", window.scrollY > 25);
 })
+
+/*Criação de animação para os elementos da página, quando o scroll for usado */
+const elementos=document.querySelectorAll('[data-anima]'); 
+const animacaoClass='animacao';
+
+function animaScroll() {
+    const topoPag=window.pageYOffset;
+    elementos.forEach(function(elemento) {
+        if(topoPag > elemento.offsetTop) {
+            elemento.classList.add(animacaoClass);
+        }else{
+            elemento.classList.remove(animacaoClass);
+        }
+    });
+}
+
+if(elementos.length) {
+    window.addEventListener('scroll',function() {
+        animaScroll();
+    })
+}

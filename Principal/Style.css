@@ -3,8 +3,8 @@
 
 
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400); /*Import das fontes de texto*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700); /*Import das fontes de texto*/
 
 
 
@@ -13,6 +13,15 @@
     --font-primary: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /*Fonte principal dos elementos da página (titulos e etc)*/
     --font-secundary: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /*Fonte secundária dos elementos da página (textos e etc)*/
     --font-action: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /*Fonte dos elementos deação (links e etc)*/
+
+}
+
+:target {
+    scroll-margin-top: .8em; /*Ponto de inicio para cada página, quando acionado o scrool*/
+}
+
+html {
+  scroll-behavior: smooth; /*Lentidão no scrool de página*/
 }
 
 /* Todos */
@@ -224,20 +233,51 @@ span {
     color: rgb(249, 115, 22); /*Cor*/
 }
 
-/* Definição de exibição do ícone hamburguer - medida de resolução de tela - responsividade */
+/* Tratamento responsivo - mobile */
 @media only screen and (max-width: 999px) {
     .barraNav {
         display: none;
     }
     .hamburguer {
-        display: block; /*Desaparição do ícone enquanto tela*/
+        display: block; /*Aparição do ícone enquanto tela*/
+    }
+    header {
+        height: 40vh!important;   
+    } 
+    .sessao-sobreNos {
+        height: 100%!important;
+    }
+    .sessao-header {
+        display: flex;
+        justify-content: center;
+    }
+    .sessao-contato {
+        height: 100%!important;
+    }
+    .show-menu .sidebar {
+        width: 62rem!important;
+    }
+    .menu-item {
+        margin-bottom: 12.5rem!important;
+    }
+    .menu {
+        top: 53%!important;
+    }
+    .menu-link {
+        font-size: 4rem!important;
+    }
+    .social-media i {
+        font-size: 3.5rem!important;
     }
 }
 
+/* Tratamento responsivo - monitor */
 @media only screen and (min-width: 999px) {
     .hamburguer {
         display: none!important; /*Desaparição do ícone enquanto tela*/
     }
+
+    
 }
 
 
@@ -509,6 +549,28 @@ section {
     bottom: 2rem;
     opacity: 1;
     visibility: visible;
+}
+
+[data-anima] {
+    opacity: 0;
+    transition: 1.7s;
+}
+
+[data-anima = "left"] {
+    transform: translate3d(-100px,0,0);
+}
+
+[data-anima = "right"] {
+    transform: translate3d(100px,0,0);
+}
+
+[data-anima = "center"] {
+    transform: translate3d(0,100px,0);
+}
+
+[data-anima].animacao {
+    opacity: 1;
+    transform: translate3d(0,0,0);
 }
 
 /* 
