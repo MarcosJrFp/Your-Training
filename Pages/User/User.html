@@ -7,56 +7,88 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="Style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
+  
 <body>
-    <div class="container">
-        <!-- Imagem de fundo -->
-        <div class="img-wrapper"></div>
-        <div class="img-"></div>
-
-        <!-- Elementos do navbar -->
-        <div class="sidebar">
-            <!-- ícone de menu, hamburguer -->
-            <div class="hamburguer">
-            <div class="line" id="line1"></div>
-            <div class="line" id="line2"></div>
-            <div class="line" id="line3"></div>
-    
-            </div>
+    <section id="sidebar"> 
+        <div class="white-label">
+        </div> 
+        <div id="sidebar-nav">   
+          <ul>
+            <li class="MyControl"><a href="#"><i class="fa fa-dashboard"></i>Progresso</a></li>
+            <li><a href="#"><i class="fa fa-desktop"></i> My Website</a></li>
+            <li><a href="#"><i class="fa fa-usd"></i> Treino</a></li>
+            <li><a href="#"><i class="fa fa-pencil-square-o"></i> Suplementos</a></li>
+            <li><a href="#"><i class="fa fa-sitemap"></i> Acompanh. Nutri.</a></li>
+            <li><a href="#"><i class="fa fa-calendar"></i> Suporte</a></li>
+            <li><a href="#"><i class="fa fa-calendar"></i> Dados Pessoais</a></li>
+            <li><a href="../Principal/index.html"><i class="fa fa-calendar"></i> Sair</a></li>
+          </ul>
         </div>
-        
-
-        <div class="perfil">
-            <div class="perfil-image">
-                <img src="/Imagens/Bodybuilder.jpg">
+      </section>
+      <section id="content">
+        <div id="header">
+          <div class="header-nav">
+            <div class="menu-button">
+              <!--<i class="fa fa-navicon"></i>-->
             </div>
-
-            <h1>Marcos Jr</h1>
-
-            <h2>Bulk</h2>
-
-            <p class="g1">
-                133 
-                <br>
-                %kcal
-            </p>
-            
-            <p class="g2">
-                3 
-                <br>
-                (-)Kg
-            </p>
-
-            <p class="g3">
-                10 
-                <br>
-                (+)Kg
-            </p>
+            <div class="nav">
+              <ul>
+                <li class="nav-profile">
+                  <div class="nav-profile-image">
+                    <img src="/Imagens/Bodybuilder.jpg">
+                    <div class="nav-profile-name">Usuário<i class="fa fa-caret-down"></i></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <!-- Importação do arquivo JS -->
-   <script src="./User.js"></script>
-</body>
-</html>
+        <div class="content">
+          <div class="content-header">
+            <h1>Progresso</h1>
+            <p>Abaixo, está todo o seu progresso, de acordo com sua categoria</p>
+          </div>
+          <div class="widget-box sample-widget">
+            <div class="widget-header">
+              <h2>Ganho de Massa Muscular</h2>
+              <i class="fa fa-cog"></i>
+            </div>
+            <div class="widget-content">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87118/sample-data-1.png">
+            </div>
+          </div>
+          <div class="widget-box sample-widget">
+            <div class="widget-header">
+              <h2>Condicionamento Físico (Força e Resistência)</h2>
+              <i class="fa fa-cog"></i>
+            </div>
+            <div class="widget-content">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87118/sample-data-1.png">
+            </div>
+          </div>
+          <div class="widget-box sample-widget">
+            <div class="widget-header">
+              <h2>Peso Corporal (Massa Mágra)</h2>
+              <i class="fa fa-cog"></i>
+            </div>
+            <div class="widget-content">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87118/sample-data-1.png">
+            </div>
+          </div>
+            <div class="widget-box sample-widget">
+            <div class="widget-header">
+              <h2>Quantidade de Treinos Semanais</h2>
+              <i class="fa fa-cog"></i>
+            </div>
+            <div class="widget-content">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87118/sample-data-1.png">
+            </div>
+          </div>  
+        </div>
+      </section>
+  </body>
+  
+  </html>
